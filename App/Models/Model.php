@@ -25,4 +25,15 @@ abstract class Model
             return false;
         }
     }
+
+    public static function findLast($lim)
+    {
+        $db = new Db();
+        $res = $db->query('SELECT *FROM ' . static::TABLE . ' ORDER BY id DESC LIMIT ' . $lim, static::class);
+        if ($res){
+            return $res;
+        } else {
+            return false;
+        }
+    }
 }
