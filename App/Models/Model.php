@@ -19,6 +19,10 @@ abstract class Model
     {
         $db = new Db();
         $res = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id = :id', static::class, [':id' => $id]);
-        return $res;
+        if ($res){
+            return $res;
+        } else {
+            return false;
+        }
     }
 }

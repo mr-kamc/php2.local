@@ -5,6 +5,6 @@ require __DIR__ . '/autoload.php';
 $db = new \App\Db();
 
 
-$users = \App\Models\User::findById('1');
+$users = \App\Models\User::findById('0');
 
 var_dump($users);
