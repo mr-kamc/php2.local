@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use App\Db;
 
@@ -10,14 +10,14 @@ abstract class Model
 
     public static function findAll()
     {
-        $db = new Db();
+        $db = Db::instance();
         $res = $db->query('SELECT * FROM ' . static::TABLE, static::class);
         return $res;
     }
 
     public static function findById($id)
     {
-        $db = new Db();
+        $db = Db::instance();
         $res = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id = :id', static::class, [':id' => $id]);
         if ($res){
             return $res;
@@ -28,7 +28,7 @@ abstract class Model
 
     public static function findLast($lim)
     {
-        $db = new Db();
+        $db = Db::instance();
         $res = $db->query('SELECT *FROM ' . static::TABLE . ' ORDER BY id DESC LIMIT ' . $lim, static::class);
         if ($res){
             return $res;
