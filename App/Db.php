@@ -5,8 +5,10 @@ namespace App;
 
 use App\Models\User;
 
-class Db extends Singleton
+class Db
 {
+
+    use Singleton;
 
     protected $dbh;
 

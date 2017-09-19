@@ -3,7 +3,7 @@
 namespace App;
 
 
-abstract class Singleton
+trait Singleton
 {
 
     protected static $instance;
@@ -16,7 +16,7 @@ abstract class Singleton
     public static function instance()
     {
         if (null === static::$instance){
-            static::$instance = new static();
+            static::$instance = new static;
         }
         return static::$instance;
     }
