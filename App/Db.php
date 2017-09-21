@@ -21,6 +21,8 @@ class Db
     {
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute($data);
+        var_dump($sth);
+        var_dump($data);
         return $res;
     }
 
