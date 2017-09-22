@@ -21,8 +21,6 @@ class Db
     {
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute($data);
-        var_dump($sth);
-        var_dump($data);
         return $res;
     }
 
@@ -34,6 +32,11 @@ class Db
             return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
         }
         return [];
+    }
+
+    public function lastInsertId()
+    {
+        return $this->dbh->lastInsertId();
     }
 
 }

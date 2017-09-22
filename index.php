@@ -9,8 +9,16 @@ include __DIR__ . '/templates/header.php';
 include __DIR__ . '/templates/content.php';
 include __DIR__ . '/templates/footer.php';
 */
+
+
+
 $user = new \App\Models\User();
-$user->name = 'Вася';
-$user->email = 'logka_dyogtya@mail.ru';
-$user->profession = 'merchendayzer';
+$user->name = 'Семюэль';
+$user->email = 'dozor_foreva@gmail.com';
+$user->profession = 'Стюарт';
 $user->insert();
+
+$db = \App\Db::instance();
+
+$id = $db->lastInsertId();
+var_dump($id);
