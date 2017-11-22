@@ -10,6 +10,9 @@
                 <li><a href="/templates/article.php?id=<?php echo $article->id; ?>"><h2><?php echo $article->caption; ?></h2></a></li>
                 <li><?php echo $article->text ?></li>
             </ul>
+            <ul>
+                <li><a href="/templates/create.php?id=<?php echo $article->id; ?>">удалить</a></li>
+            </ul>
 
         <?php endforeach; ?>
     </article>
