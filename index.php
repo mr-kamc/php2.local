@@ -26,3 +26,4 @@ var_dump($id);
 
 $config = \App\Config::instance();
 var_dump($config->data);
+echo $config->data['db']['host'];
