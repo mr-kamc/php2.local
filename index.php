@@ -11,19 +11,10 @@ include __DIR__ . '/templates/footer.php';
 */
 
 
-/*
+
 $user = new \App\Models\User();
-$user->name = 'Семюэль';
+$user->name = 'Джон';
 $user->email = 'dozor_foreva@gmail.com';
-$user->profession = 'Стюарт';
-$user->insert();
-
-$db = \App\Db::instance();
-
-$id = $db->lastInsertId();
-var_dump($id);
-*/
-
-$config = \App\Config::instance();
-var_dump($config->data);
-echo $config->data['db']['host'];
+$user->profession = 'Главнокомандующий';
+$user->id = 2;
+$user->delete();
