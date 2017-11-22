@@ -11,7 +11,7 @@ include __DIR__ . '/templates/footer.php';
 */
 
 
-
+/*
 $user = new \App\Models\User();
 $user->name = 'Семюэль';
 $user->email = 'dozor_foreva@gmail.com';
@@ -22,3 +22,7 @@ $db = \App\Db::instance();
 
 $id = $db->lastInsertId();
 var_dump($id);
+*/
+
+$config = \App\Config::instance();
+var_dump($config->data);
