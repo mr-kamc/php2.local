@@ -11,7 +11,9 @@
                 <li><?php echo $article->text ?></li>
             </ul>
             <ul>
-                <li><a href="/templates/create.php?id=<?php echo $article->id; ?>">удалить</a></li>
+                <li><a href="/templates/create.php?id=<?php echo $article->id; ?>">редактировать</a></li>
+                <li><a href="/index.php?id=<?php echo $article->id; ?>&op=del">удалить</a></li>
+                <li><a href="/templates/add.php">добавить</a></li>
             </ul>
 
         <?php endforeach; ?>

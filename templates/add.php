@@ -9,17 +9,12 @@ include __DIR__ . '/header.php';
         <p><a href="/">На главную</a></p>
     </nav>
     <article>
-        <?php
-        require __DIR__ . '/../autoload.php';
-        $article = \App\Models\News::findById($_GET['id'])[0];
-        ?>
         <form method="post" action="/index.php">
-            <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
-            <input type="text" name="caption" value="<?php echo $article->caption; ?>">
+            <input type="text" name="caption" placeholder="Введите название статьи">
             <br>
-            <textarea name="text"><?php echo $article->text; ?>"</textarea>
+            <textarea name="text" placeholder="Текст новости"></textarea>
             <br>
-            <input type="text" name="author" value="<?php echo $article->author; ?>">
+            <input type="text" name="author" placeholder="автор">
             <input type="submit" value="отправить">
         </form>
     </article>
