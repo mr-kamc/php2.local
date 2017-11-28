@@ -2,6 +2,12 @@
 
 require __DIR__ . '/autoload.php';
 
+$news = \App\Models\News::findAll();
+
+include __DIR__ . '/templates/index.php';
+
+/*
+
 
 if ((isset($_POST))&&(!empty($_POST))){
     $news = new \App\Models\News();
@@ -23,4 +29,4 @@ $news = \App\Models\News::findLast(3);
 include __DIR__ . '/templates/header.php';
 include __DIR__ . '/templates/content.php';
 include __DIR__ . '/templates/footer.php';
-
+*/
