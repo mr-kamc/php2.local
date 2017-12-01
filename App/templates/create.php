@@ -10,8 +10,8 @@ include __DIR__ . '/header.php';
     </nav>
     <article>
         <?php
-        require __DIR__ . '/../autoload.php';
-        $article = \App\Models\News::findById($_GET['id'])[0];
+        require __DIR__ . '/../../autoload.php';
+        var_dump($article);
         ?>
         <form method="post" action="/index.php">
             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
@@ -27,3 +27,5 @@ include __DIR__ . '/header.php';
 <?php
 include __DIR__ . '/footer.php';
 ?>
+
+    //to-do доделать

@@ -32,9 +32,9 @@
                                 <h4 class="card-title"><?php echo $article->caption; ?></h4>
                                 <p class="card-text"><?php echo $article->text; ?></p>
                                 <h6 class="card-subtitle text-muted"><?php echo $article->author; ?></h6>
-                                <a href="/App/templates/create.php?id=<?php echo $article->id; ?>" class="btn btn-primary">редактировать</a>
+                                <a href="/admin.php?id=<?php echo $article->id; ?>" class="btn btn-primary">редактировать</a>
                                 <a href="/App/index.php?id=<?php echo $article->id; ?>&op=del" class="btn btn-primary">удалить</a>
-                                <a href="/App/templates/article.php?id=<?php echo $article->id; ?>" class="btn btn-primary">открыть новость</a>
+                                <a href="/article.php?id=<?php echo $article->id; ?>" class="btn btn-primary">открыть новость</a>
                             </div>
                         </div>
                     <?php } ?>
