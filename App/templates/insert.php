@@ -9,7 +9,7 @@ include __DIR__ . '/header.php';
         <p><a href="/">На главную</a></p>
     </nav>
     <article>
-        <form method="post" action="/index.php">
+        <form method="post" action="/insert.php">
             <input type="text" name="caption" placeholder="Введите название статьи">
             <br>
             <textarea name="text" placeholder="Текст новости"></textarea>

@@ -10,7 +10,7 @@
     <article>
         <?php
             require __DIR__ . '/../../autoload.php';
-            $article = \App\Models\News::findById($_GET['id'])[0];
+            $article = \App\Models\News::findById($_GET['id']);
         ?>
 
         <h2><?php echo $article->caption; ?></h2>

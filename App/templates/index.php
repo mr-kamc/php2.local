@@ -17,7 +17,7 @@
     <header><h1>Главные новости из Малых Васюков</h1></header>
     <nav>
         <p><a href="/">На главную</a></p>
-        <a href="/App/templates/add.php">добавить новость</a>
+        <a href="/App/templates/insert.php">добавить новость</a>
     </nav>
     <div class="row">
         <div class="col-md-2">
@@ -32,8 +32,8 @@
                                 <h4 class="card-title"><?php echo $article->caption; ?></h4>
                                 <p class="card-text"><?php echo $article->text; ?></p>
                                 <h6 class="card-subtitle text-muted"><?php echo $article->author; ?></h6>
-                                <a href="/admin.php?id=<?php echo $article->id; ?>" class="btn btn-primary">редактировать</a>
-                                <a href="/App/index.php?id=<?php echo $article->id; ?>&op=del" class="btn btn-primary">удалить</a>
+                                <a href="/App/templates/update.php?id=<?php echo $article->id; ?>" class="btn btn-primary">редактировать</a>
+                                <a href="/delete.php?id=<?php echo $article->id; ?>&op=del" class="btn btn-primary">удалить</a>
                                 <a href="/article.php?id=<?php echo $article->id; ?>" class="btn btn-primary">открыть новость</a>
                             </div>
                         </div>
